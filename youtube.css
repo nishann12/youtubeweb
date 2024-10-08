@@ -1,0 +1,235 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 140px; /* Adjust this value based on your navbar and category height */
+    background-color: #1c1c1c;
+}
+
+/* Category Container */
+.category-container {
+    padding: 0;
+    position: fixed;
+    top: 70px; /* Height of the navbar */
+    left: 0;
+    right: 0;
+    background-color: white; /* Background color to match the layout */
+    z-index: 500; /* Higher than the navbar */
+    border-bottom: 1px solid #ccc; /* Optional border for separation */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.category-container .col {
+    padding: 10px 0;
+}
+
+.category-container span {
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar-brand img {
+    margin-right: 8px; 
+}
+
+.nav-link {
+    margin-left: 10px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.position-absolute {
+    z-index: 1; /* Ensures the icon is above the input field */
+}
+
+.bi-search {
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #ffffff; /* Change color based on your theme */
+}
+
+.custom-search-input {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    border-radius: 0.5rem; /* Rounded corners */
+    border: 1px solid #ced4da; /* Light border */
+}
+
+.custom-search-icon {
+    color: #343a40; /* Dark gray icon color */
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    padding: 10px;
+}
+
+.offcanvas-body {
+    background-color: #252424;
+    color: #fff;
+    width: 100%;
+    gap: 40px;
+    font-size: 15px;
+    scrollbar-width: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 24px;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0 !important;
+}
+
+.offcanvas-body span:hover {
+    background-color: gray;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.sidebar .nav-link {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.sidebar .nav-link.active {
+    font-weight: bold;
+}
+
+/* Card */
+.card {
+    border-radius: 18px;
+    width: 100%;
+    margin: auto;
+}
+
+.card .card-img-top {
+    width: 100%;
+    height: 170px; 
+}
+
+/* Iframe Container */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Navbar Links */
+.navbar a {
+    color: white; 
+}
+
+/* Category Container Scrolling */
+.category-container .col {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scrollbar-width: none; /* Firefox: Hide scrollbar */
+    -ms-overflow-style: none; /* Internet Explorer and Edge: Hide scrollbar */
+}
+
+.category-container .col::-webkit-scrollbar {
+    display: none; /* Safari and Chrome: Hide scrollbar */
+}
+
+/* Placeholder */
+::placeholder {
+    color: #ffffff;
+}
+
+/* Form Control */
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border: 1px solid #fff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add shadow on focus */
+}
+
+/* Button */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten button on hover */
+}
+
+/* Media Queries */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px) {
+    body {
+        padding-top: 110px; /* Adjusted padding to make room for category */
+    }
+    .category-container {
+        top: 60px; /* Adjust based on the smaller screen size */
+        display: block; /* Ensure category is displayed */
+        overflow-x: auto;
+    }
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .category-container span {
+        font-size: 14px; 
+    }
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 1199.98px) {
+    body {
+        padding-top: 100px; 
+    }
+    .category-container {
+        top: 100px; 
+    }
+    .navbar-brand {
+        font-size: 22px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .category-container span {
+        font-size: 16px; /* Adjust category font size */
+    }
+}
+
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        font-size: 23px;
+    }
+    .category-container {
+        top: 60px;
+    }
+    .category-container span {
+        font-size: 18px; 
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 24px;
+    }
+    .category-container span {
+        font-size: 20px;
+    }
+}
