@@ -19,6 +19,13 @@ body {
     background-color: #252424;
     overflow: auto;
 }
+.sidebar{
+    font-weight:600;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
 
 .header {
     margin: 0%;
@@ -201,7 +208,6 @@ body {
     height: 100vh;
     width: 100%;
 }
-
 @media (max-width: 1024px) {
     .header {
         height: 50px;
@@ -215,6 +221,7 @@ body {
 
     .search-container input {
         font-size: 16px;
+        display: none;
     }
 
     .profile-container {
@@ -228,23 +235,58 @@ body {
     .vedio-container {
         height: 80vh;
     }
+
+    .logo-container {
+        display: flex;
+        justify-content: start; /* Align items to the left */
+        align-items: center; /* Center logo and text vertically */
+    }
+
+    .logo {
+        height: 30px; /* Adjust logo size */
+        width: auto;
+        margin-right: 8px; /* Space between logo and text */
+    }
+
+    .logo-text {
+        font-size: 18px; /* Adjust text size for visibility */
+        color: #000; /* Ensure text color is visible */
+    }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .header {
         height: 45px;
         padding: 2px 5px;
     }
 
+    .logo-container {
+        display: flex;
+        justify-content: start; /* Align items to the left */
+        align-items: center; /* Center logo and text vertically */
+    }
+
+    .logo {
+        height: 35px; /* Adjust logo size for mobile */
+        width: auto;
+        margin-right: 5px; /* Space between logo and text */
+    }
+
+    .logo-text {
+        font-size: 16px; /* Adjust text size for smaller screens */
+        color: #000; /* Ensure text color is visible */
+    }
+
     .search-container {
         flex: 0 1 300px;
         margin-left: 10px;
+        display: none;
     }
 
     .search-container input {
         font-size: 14px;
         padding: 8px;
+        display: none;
     }
 
     .card {
@@ -255,10 +297,7 @@ body {
         height: 60vh;
     }
 
-    .logo-container {
-        display: none; /* Hide logo on small screens */
-    }
-    .offcanvas-body{
-        display: none;
+    .offcanvas-body {
+        display: block;
     }
 }
